@@ -74,6 +74,10 @@ public class CardboardOverlayView extends LinearLayout {
         setExplosion(type);
     }
 
+    public void changeGun(int type) {
+        setChangeGun(type);
+    }
+
     private abstract class EndAnimationListener implements Animation.AnimationListener {
         @Override public void onAnimationRepeat(Animation animation) {}
         @Override public void onAnimationStart(Animation animation) {}
@@ -109,6 +113,11 @@ public class CardboardOverlayView extends LinearLayout {
         mRightView.setViewExplosion(type);
     }
 
+    private void setChangeGun(int type) {
+        mLeftView.setViewGun(type);
+        mRightView.setViewGun(type);
+    }
+
     private void setColor(int color) {
         mLeftView.setColor(color);
         mRightView.setColor(color);
@@ -121,6 +130,7 @@ public class CardboardOverlayView extends LinearLayout {
      * This is a helper class for CardboardOverlayView.
      */
     private class CardboardOverlayEyeView extends ViewGroup {
+        private final ImageView imageView;
         private final ImageView explodeView;
         private final TextView textView;
         private final TextView HUDView;
@@ -128,6 +138,10 @@ public class CardboardOverlayView extends LinearLayout {
 
         public CardboardOverlayEyeView(Context context, AttributeSet attrs) {
             super(context, attrs);
+            imageView = new ImageView(context, attrs);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            imageView.setAdjustViewBounds(true);  // Preserve aspect ratio.
+            addView(imageView);
 
             explodeView = new ImageView(context, attrs);
             explodeView.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -151,6 +165,7 @@ public class CardboardOverlayView extends LinearLayout {
         }
 
         public void setColor(int color) {
+            imageView.setImageResource(0);
             textView.setTextColor(color);
             HUDView.setTextColor(color);
         }
@@ -187,6 +202,15 @@ public class CardboardOverlayView extends LinearLayout {
             }, 500);
         }
 
+        public void setViewGun(int type) {
+            if(type==0)
+                imageView.setImageResource(0);
+            else if(type==1)
+                imageView.setImageResource(0);
+            else if(type==2)
+                imageView.setImageResource(0);
+        }
+
         public void setOffset(float offset) {
             this.offset = offset;
         }
@@ -213,6 +237,9 @@ public class CardboardOverlayView extends LinearLayout {
             float imageMargin = (1.0f - imageSize) / 2.0f;
             float leftMargin = (int) (width * (imageMargin + offset));
             float topMargin = (int) (height * (imageMargin + verticalImageOffset) + 400);
+            imageView.layout(
+                    (int) leftMargin, (int) topMargin,
+                    (int) (leftMargin + width * imageSize), (int) (topMargin + height * imageSize));
 
             // Explosion gif
             float exImageMargin = (1.0f - imageSize) / 2.0f;

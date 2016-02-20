@@ -1,10 +1,12 @@
 package at.maui.cardar.ui.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Vibrator;
 
 import com.google.vrtoolkit.cardboard.CardboardActivity;
+import com.google.vrtoolkit.cardboard.CardboardDeviceParams;
 import com.google.vrtoolkit.cardboard.CardboardView;
 
 import at.maui.cardar.R;
@@ -18,19 +20,28 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.lang.reflect.Method;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.UUID;
 
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class ArActivity extends CardboardActivity {
 
@@ -136,18 +147,40 @@ public class ArActivity extends CardboardActivity {
     public void onCardboardTrigger() {
         Timber.i("onCardboardTrigger");
 
+//        if (mRenderer.isLookingAtObject()) {
+//            mScore++;
+//            overlayView.show3DToast("Found it! Look around for another one.\nScore = " + mScore);
+//            mRenderer.hideObject();
+//        } else {
+//            overlayView.show3DToast("Look around to find the object!");
+//        }
 //        // Always give user feedback
 
         if(currHUD == 0) {
-
+            overlayView.show3DToast("PRIMARY" + "\n" + "-------------------\n|   " +
+                    getString(R.string.weap_ionbeam) + " |\n" +
+                    "-------------------\n" +
+                    getString(R.string.weap_rocketlauncher) + "\n" +
+                    getString(R.string.weap_watergun));
+            overlayView.changeGun(currHUD);
             currHUD = 1;
         }
         else if(currHUD == 1) {
-
+            overlayView.show3DToast("PRIMARY" + "\n" +"-----------------------\n| " +
+                                    getString(R.string.weap_rocketlauncher) + " |\n" +
+                                    "-----------------------\n" +
+                                    getString(R.string.weap_watergun) + "\n" +
+                                    getString(R.string.weap_ionbeam));
+            overlayView.changeGun(currHUD);
             currHUD = 2;
         }
         else if(currHUD == 2) {
-
+            overlayView.show3DToast("PRIMARY" + "\n" +"-------------------\n| " +
+                                    getString(R.string.weap_watergun) + " |\n" +
+                                    "-------------------\n" +
+                                    getString(R.string.weap_ionbeam) + "\n" +
+                                    getString(R.string.weap_rocketlauncher));
+            overlayView.changeGun(currHUD);
             currHUD = 0;
         }
         mVibrator.vibrate(50);
