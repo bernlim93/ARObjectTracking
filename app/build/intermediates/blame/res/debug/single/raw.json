@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/build/intermediates/res/merged/debug/raw/light_vertex.shader",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/raw/light_vertex.shader"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/build/intermediates/res/merged/debug/raw/grid_fragment.shader",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/raw/grid_fragment.shader"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/res/merged/debug/raw/grid_fragment.shader",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/raw/grid_fragment.shader"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/raw/grid_fragment.shader",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/raw/grid_fragment.shader"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/res/merged/debug/raw/light_vertex.shader",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/raw/light_vertex.shader"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/raw/light_vertex.shader",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/raw/light_vertex.shader"
+    }
+]

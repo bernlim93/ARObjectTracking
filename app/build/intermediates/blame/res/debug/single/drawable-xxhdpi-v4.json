@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/ic_launcher.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-xxhdpi/common_full_open_on_phone.png"
+    }
+]

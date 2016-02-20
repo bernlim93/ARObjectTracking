@@ -1,0 +1,93 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:2:1-39:12
+	xmlns:tools
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:2:11-69
+	package
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:4:5-29
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:6:5-38
+	android:targetSdkVersion
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml
+	tools:node
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:6:15-35
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:8:5-68
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:8:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:9:5-74
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:9:22-71
+uses-permission#android.permission.NFC
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:10:5-62
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:10:22-59
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:11:22-63
+uses-permission#android.permission.CAMERA
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:12:5-65
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:12:22-62
+uses-permission#android.permission.INTERNET
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:13:22-64
+uses-feature#0x00020000
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:15:5-78
+	android:required
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:15:52-75
+	android:glEsVersion
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:15:19-51
+application
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:16:5-37:19
+	android:label
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:19:9-41
+	android:allowBackup
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:17:9-35
+	android:icon
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:18:9-45
+	android:theme
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:20:9-40
+activity#at.maui.cardar.ui.activity.MyActivity
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:21:9-29:20
+	android:label
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:23:13-45
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:22:13-51
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:27:27-74
+activity#at.maui.cardar.ui.activity.ArActivity
+ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:31:9-36:20
+	android:screenOrientation
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:34:13-50
+	android:label
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:33:13-45
+	android:configChanges
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:35:13-63
+	android:name
+		ADDED from /Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/AndroidManifest.xml:32:13-51

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/res/merged/debug/menu/my.xml",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/menu/my.xml"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/menu/my.xml",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/menu/my.xml"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/build/intermediates/res/merged/debug/menu/my.xml",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/menu/my.xml"
+    }
+]
