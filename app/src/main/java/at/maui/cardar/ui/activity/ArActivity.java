@@ -41,10 +41,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.opencv.android.BaseLoaderCallback;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.android.LoaderCallbackInterface;
 import org.w3c.dom.Text;
 
 public class ArActivity extends CardboardActivity {
-
     @InjectView(R.id.overlay)
     CardboardOverlayView overlayView;
 
@@ -77,6 +79,21 @@ public class ArActivity extends CardboardActivity {
     // MAC-address of Bluetooth module (you must edit this line)
     private static String address = "20:15:05:14:09:37";
 
+    private BaseLoaderCallback  mLoaderCallback = new BaseLoaderCallback(this) {
+        @Override
+        public void onManagerConnected(int status) {
+            switch (status) {
+                case LoaderCallbackInterface.SUCCESS:
+                {
+                    Log.i("Activity", "Successfully loaded OpenCV");
+                } break;
+                default:
+                {
+                    super.onManagerConnected(status);
+                } break;
+            }
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,13 +105,12 @@ public class ArActivity extends CardboardActivity {
 
         mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-        // Associate a CardboardView.StereoRenderer with cardboardView.
-        mRenderer = new Renderer(this);
-        cardboardView.setRenderer(mRenderer);
-
         // Associate the cardboardView with this activity.
         setCardboardView(cardboardView);
 
+        // Associate a CardboardView.StereoRenderer with cardboardView.
+        mRenderer = new Renderer(this, overlayView);
+        cardboardView.setRenderer(mRenderer);
 
         // for display the received data from the Arduino
         txtArduino = "";
@@ -138,7 +154,6 @@ public class ArActivity extends CardboardActivity {
 
         btAdapter = BluetoothAdapter.getDefaultAdapter();       // get Bluetooth adapter
         checkBTState();
-
         //mConnectedThread.write("1");
 
     }
@@ -155,7 +170,7 @@ public class ArActivity extends CardboardActivity {
 //            overlayView.show3DToast("Look around to find the object!");
 //        }
 //        // Always give user feedback
-
+/*
         if(currHUD == 0) {
             overlayView.show3DToast("PRIMARY" + "\n" + "-------------------\n|   " +
                     getString(R.string.weap_ionbeam) + " |\n" +
@@ -183,7 +198,7 @@ public class ArActivity extends CardboardActivity {
             overlayView.changeGun(currHUD);
             currHUD = 0;
         }
-        mVibrator.vibrate(50);
+*/        mVibrator.vibrate(50);
     }
 
 
@@ -206,6 +221,13 @@ public class ArActivity extends CardboardActivity {
     @Override
     public void onResume() {
         super.onResume();
+        if (!OpenCVLoader.initDebug()) {
+            Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
+            OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this, mLoaderCallback);
+        } else {
+            Log.d(TAG, "OpenCV library found inside package. Using it!");
+            mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
+        }
 
         Log.d(TAG, "...onResume - try connect...");
 
