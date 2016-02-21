@@ -61,9 +61,6 @@ public class Renderer implements CardboardView.StereoRenderer {
     private static final int NUM_READINGS = 5;
     private static final int NUM_CLIENTS = 2;
 
-    private static int red_size = 0;
-    private static int blue_size = 0;
-
     public static String[] txtSplit = new String[5];
 
     private final WorldLayoutData DATA = new WorldLayoutData();
@@ -421,13 +418,12 @@ public class Renderer implements CardboardView.StereoRenderer {
         mBlobColorHsv = converScalarRgba2Hsv(new Scalar(200, 0, 10, 255));
         mDetector.setHsvColor(mBlobColorHsv);
         mDetector.process(img_rgba);
-        red_size = mDetector.getContours().size();
+        int red_size = mDetector.getContours().size();
 
         mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
         mDetector.setHsvColor(mBlobColorHsv);
         mDetector.process(img_rgba);
-
-        blue_size = mDetector.getContours().size();
+        int blue_size = mDetector.getContours().size();
 
         // RED
         if(red_size > blue_size) {

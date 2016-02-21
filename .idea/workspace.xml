@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/activity/ArActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73417723">
-              <caret line="167" column="12" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="43" />
+            <state vertical-scroll-proportion="-6.851852">
+              <caret line="160" column="2" selection-start-line="160" selection-start-column="2" selection-end-line="160" selection-end-column="2" />
               <folding>
                 <element signature="e#3493#5188#0" expanded="true" />
                 <element signature="e#5187#5188#0" expanded="true" />
@@ -43,14 +43,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Renderer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Renderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/ar/Renderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.111111">
-              <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4556962">
+              <caret line="424" column="36" selection-start-line="424" selection-start-column="36" selection-end-line="424" selection-end-column="36" />
               <folding>
-                <element signature="e#15359#17827#0" expanded="true" />
-                <element signature="e#17826#17827#0" expanded="true" />
+                <element signature="e#15283#17758#0" expanded="true" />
+                <element signature="e#17757#17758#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2330,8 +2330,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/activity/ArActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/ar/Renderer.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/widget/CardboardOverlayView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/ar/Renderer.java" />
       </list>
     </option>
   </component>
@@ -2835,13 +2835,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/ar/Renderer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/activity/ArActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.111111">
-          <caret line="428" column="0" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.851852">
+          <caret line="160" column="2" selection-start-line="160" selection-start-column="2" selection-end-line="160" selection-end-column="2" />
           <folding>
-            <element signature="e#15359#17827#0" expanded="true" />
-            <element signature="e#17826#17827#0" expanded="true" />
+            <element signature="e#3493#5188#0" expanded="true" />
+            <element signature="e#5187#5188#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2856,13 +2856,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/activity/ArActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/at/maui/cardar/ui/ar/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73417723">
-          <caret line="167" column="12" selection-start-line="167" selection-start-column="12" selection-end-line="167" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.4556962">
+          <caret line="424" column="36" selection-start-line="424" selection-start-column="36" selection-end-line="424" selection-end-column="36" />
           <folding>
-            <element signature="e#3493#5188#0" expanded="true" />
-            <element signature="e#5187#5188#0" expanded="true" />
+            <element signature="e#15283#17758#0" expanded="true" />
+            <element signature="e#17757#17758#0" expanded="true" />
           </folding>
         </state>
       </provider>

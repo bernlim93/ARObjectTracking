@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/libs/cardboard.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7800973ef52ae629978ad974370b6a0b9bc79e25">
+        <dex dex="/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/pre-dexed/debug/cardboard_2a367257e9a2439d47f01b575cb1410d7d875903.jar" />
+    </item>
+    <item
+        jar="/Users/bernard/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/2.4.1/a220494292c6e32a3a10d66fc6bc56fd2416c163/timber-2.4.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a220494292c6e32a3a10d66fc6bc56fd2416c163">
+        <dex dex="/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/pre-dexed/debug/timber-2.4.1_6b29d7cc860ee5fb81edea3ea3631d70e859d281.jar" />
+    </item>
+    <item
+        jar="/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/exploded-aar/cardboard-detector/openCVLibrary300/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="df85275a9dc0d156460fc4c5d2fa2e92217a2f11">
+        <dex dex="/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/pre-dexed/debug/cardboard-detector-openCVLibrary300-unspecified_027e7f38da3bb8bed14d6ef41fa269f573db32e0.jar" />
+    </item>
+    <item
+        jar="/Users/bernard/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/5.1.1/b3652dfd65ca0bcf18790ff1a1f7624af4cb2bb8/butterknife-5.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b3652dfd65ca0bcf18790ff1a1f7624af4cb2bb8">
+        <dex dex="/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/pre-dexed/debug/butterknife-5.1.1_c848f503cb464b1da90532c9fbd60a55d3039e1b.jar" />
+    </item>
+
+</items>
