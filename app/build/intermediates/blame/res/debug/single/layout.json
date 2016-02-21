@@ -1,34 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my.xml",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\layout\\activity_my.xml"
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/layout/activity_my.xml",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/layout/activity_my.xml"
     },
     {
-        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ar.xml",
-        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\layout\\activity_ar.xml"
-    },
-    {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my.xml",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\layout\\activity_my.xml"
-    },
-    {
-        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my.xml",
-        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\layout\\activity_my.xml"
-    },
-    {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ar.xml",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\layout\\activity_ar.xml"
-    },
-    {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ar.xml",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\layout\\activity_ar.xml"
-    },
-    {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ar.xml",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\layout\\activity_ar.xml"
-    },
-    {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my.xml",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\layout\\activity_my.xml"
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/layout/activity_ar.xml",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/layout/activity_ar.xml"
     }
 ]

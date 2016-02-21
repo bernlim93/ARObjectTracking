@@ -28,7 +28,6 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import at.maui.cardar.R;
-import at.maui.cardar.ui.gltext.GLText;
 import at.maui.cardar.ui.widget.CardboardOverlayView;
 import timber.log.Timber;
 
@@ -116,14 +115,14 @@ public class Renderer implements CardboardView.StereoRenderer {
 
     private ColorBlobDetector mDetector;
     private CardboardOverlayView mOverlayView;
-    private GLText glText;
+//    private GLText glText;
 
     public Renderer(Context ctx, CardboardOverlayView ov) {
         mOverlayView = ov;
 
         mContext = ctx;
-        glText = new GLText(mContext.getAssets());
-        glText.load( "Roboto-Regular.ttf", 14, 2, 2 );
+//        glText = new GLText(mContext.getAssets());
+//        glText.load( "Roboto-Regular.ttf", 14, 2, 2 );
 
         mCamera = new float[16];
         mView = new float[16];
@@ -172,18 +171,18 @@ public class Renderer implements CardboardView.StereoRenderer {
 
         // Apply the eye transformation to the camera.
         Matrix.multiplyMM(mView, 0, eyeTransform.getEyeView(), 0, mCamera, 0);
-
-        glText.begin( 1.0f, 1.0f, 1.0f, 1.0f, mModelViewProjection );         // Begin Text Rendering (Set Color WHITE)
-        glText.drawC("Test String 3D!", 0f, 0f, 0f, 0, -30, 0);
-//		glText.drawC( "Test String :)", 0, 0, 0 );          // Draw Test String
-        glText.draw( "Diagonal 1", 40, 40, 40);                // Draw Test String
-        glText.draw( "Column 1", 100, 100, 90);              // Draw Test String
-        glText.end();                                   // End Text Rendering
-
-        glText.begin( 0.0f, 0.0f, 1.0f, 1.0f, mModelViewProjection );         // Begin Text Rendering (Set Color BLUE)
-        glText.draw( "More Lines...", 50, 200 );        // Draw Test String
-        glText.draw( "The End.", 50, 200 + glText.getCharHeight(), 180);  // Draw Test String
-        glText.end();
+//
+//        glText.begin( 1.0f, 1.0f, 1.0f, 1.0f, mModelViewProjection );         // Begin Text Rendering (Set Color WHITE)
+//        glText.drawC("Test String 3D!", 0f, 0f, 0f, 0, -30, 0);
+////		glText.drawC( "Test String :)", 0, 0, 0 );          // Draw Test String
+//        glText.draw( "Diagonal 1", 40, 40, 40);                // Draw Test String
+//        glText.draw( "Column 1", 100, 100, 90);              // Draw Test String
+//        glText.end();                                   // End Text Rendering
+//
+//        glText.begin( 0.0f, 0.0f, 1.0f, 1.0f, mModelViewProjection );         // Begin Text Rendering (Set Color BLUE)
+//        glText.draw( "More Lines...", 50, 200 );        // Draw Test String
+//        glText.draw( "The End.", 50, 200 + glText.getCharHeight(), 180);  // Draw Test String
+//        glText.end();
 
         /*GLES20.glUseProgram(mGlPrograms[0]);
 
@@ -392,7 +391,7 @@ public class Renderer implements CardboardView.StereoRenderer {
         GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_NEAREST);
     }
 
-    boolean detectionColorToggle = true;
+    int detectionColorToggle = 0;
     private final Camera.PreviewCallback mCameraCallback = new Camera.PreviewCallback() {
         public void onPreviewFrame(byte[] data, Camera c) {
             //Log.d(TAG, "ON Preview frame");
@@ -405,24 +404,29 @@ public class Renderer implements CardboardView.StereoRenderer {
             //Log.i("Renderer", "Top Right Color = " + img_rgba.get(0, 0)[0] + " , " + img_rgba.get(0, 0)[1] + " , " + img_rgba.get(0, 0)[2] + " , " + img_rgba.get(0,0)[3]);
 
             Scalar mBlobColorHsv;
-            if(detectionColorToggle) {  //look for red this frame
-                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(255, 0, 0, 255));
-            } else {    //look for blue this frame
-                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 0, 255, 255));
+            if(detectionColorToggle==1) {  //look for red this frame
+                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(200, 0, 10, 255));
+            } else if(detectionColorToggle==2) {    //look for blue this frame
+                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
+            } else {    //set to just black
+                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 0, 0, 255));
             }
             mDetector.setHsvColor(mBlobColorHsv);
 
             mDetector.process(img_rgba);
-            List<MatOfPoint> contours = mDetector.getContours();
-            //Log.i("Renderer", "contours = " + contours.size());
+
+            // Found the color we are looking for! (If the contour size is larger than 0)
             if(mDetector.getContours().size() > 0) {
-                if(detectionColorToggle)
+                if(detectionColorToggle == 1)
                     mOverlayView.show3DToast("RED DETECTED");
-                else
+                else if(detectionColorToggle == 2)
                     mOverlayView.show3DToast("BLUE DETECTED");
+                else
+                    mOverlayView.show3DToast((""));
             }
 
-            detectionColorToggle = !detectionColorToggle;
+            detectionColorToggle = (detectionColorToggle + 1) % 3;
+            //Log.i("Activity", Integer.toString(detectionColorToggle));
         }
     };
     private void initRealWorldCamera() {
