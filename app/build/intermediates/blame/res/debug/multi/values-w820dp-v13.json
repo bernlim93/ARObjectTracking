@@ -1,53 +1,5 @@
 [
     {
-        "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 295,
-                        "endColumn": 57,
-                        "endOffset": 348
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 291,
-                        "endColumn": 57,
-                        "endOffset": 344
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/values-w820dp-v13/values-w820dp-v13.xml",
         "map": [
             {

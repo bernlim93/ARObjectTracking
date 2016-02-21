@@ -426,6 +426,7 @@ public class Renderer implements CardboardView.StereoRenderer {
         mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
         mDetector.setHsvColor(mBlobColorHsv);
         mDetector.process(img_rgba);
+
         blue_size = mDetector.getContours().size();
 
         // RED
