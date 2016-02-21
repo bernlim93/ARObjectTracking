@@ -58,6 +58,9 @@ public class Renderer implements CardboardView.StereoRenderer {
     private static final float YAW_LIMIT = 0.12f;
     private static final float PITCH_LIMIT = 0.12f;
 
+    private static final int NUM_READINGS = 5;
+    private static final int NUM_CLIENTS = 2;
+
     private final WorldLayoutData DATA = new WorldLayoutData();
 
     private Context mContext;
@@ -72,10 +75,10 @@ public class Renderer implements CardboardView.StereoRenderer {
     private FloatBuffer mWallColors;
     private FloatBuffer mWallNormals;
 
-    private FloatBuffer mCubeVertices;
-    private FloatBuffer mCubeColors;
-    private FloatBuffer mCubeFoundColors;
-    private FloatBuffer mCubeNormals;
+//    private FloatBuffer mCubeVertices;
+//    private FloatBuffer mCubeColors;
+//    private FloatBuffer mCubeFoundColors;
+//    private FloatBuffer mCubeNormals;
 
     // Head Position
     private float[] mHeadView;
@@ -117,6 +120,8 @@ public class Renderer implements CardboardView.StereoRenderer {
     private CardboardOverlayView mOverlayView;
 //    private GLText glText;
 
+    private int[] mClient_flags;
+
     public Renderer(Context ctx, CardboardOverlayView ov) {
         mOverlayView = ov;
 
@@ -147,6 +152,8 @@ public class Renderer implements CardboardView.StereoRenderer {
         pTexCoord = ByteBuffer.allocateDirect(8*4).order(ByteOrder.nativeOrder()).asFloatBuffer();
         pTexCoord.put ( ttmp );
         pTexCoord.position(0);
+
+        mClient_flags = new int[NUM_CLIENTS];
     }
 
     @Override
@@ -394,41 +401,47 @@ public class Renderer implements CardboardView.StereoRenderer {
     int detectionColorToggle = 0;
     private final Camera.PreviewCallback mCameraCallback = new Camera.PreviewCallback() {
         public void onPreviewFrame(byte[] data, Camera c) {
-            //Log.d(TAG, "ON Preview frame");
-            mDetector = new ColorBlobDetector();
-            Mat img = new Mat(1080 , 1920, CvType.CV_8UC2);
-            Mat img_rgba = new Mat();
-            img.put(0, 0, data);
-            Imgproc.cvtColor(img, img_rgba, Imgproc.COLOR_YUV2RGBA_NV21, 4);
+        //Log.d(TAG, "ON Preview frame");
+        mDetector = new ColorBlobDetector();
+        Mat img = new Mat(1080 , 1920, CvType.CV_8UC2);
+        Mat img_rgba = new Mat();
+        img.put(0, 0, data);
+        Imgproc.cvtColor(img, img_rgba, Imgproc.COLOR_YUV2RGBA_NV21, 4);
 
-            //Log.i("Renderer", "Top Right Color = " + img_rgba.get(0, 0)[0] + " , " + img_rgba.get(0, 0)[1] + " , " + img_rgba.get(0, 0)[2] + " , " + img_rgba.get(0,0)[3]);
+        //Log.i("Renderer", "Top Right Color = " + img_rgba.get(0, 0)[0] + " , " + img_rgba.get(0, 0)[1] + " , " + img_rgba.get(0, 0)[2] + " , " + img_rgba.get(0,0)[3]);
 
-            Scalar mBlobColorHsv;
-            if(detectionColorToggle==1) {  //look for red this frame
-                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(200, 0, 10, 255));
-            } else if(detectionColorToggle==2) {    //look for blue this frame
-                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
-            } else {    //set to just black
-                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 0, 0, 255));
+        Scalar mBlobColorHsv;
+        if(detectionColorToggle==1) {  //look for red this frame
+            mBlobColorHsv = converScalarRgba2Hsv(new Scalar(200, 0, 10, 255));
+        } else if(detectionColorToggle==2) {    //look for blue this frame
+            mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
+        } else {    //set to just black
+            mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 0, 0, 255));
+        }
+        mDetector.setHsvColor(mBlobColorHsv);
+
+        mDetector.process(img_rgba);
+
+        // Found the color we are looking for! (If the contour size is larger than 0)
+        if(mDetector.getContours().size() > 0) {
+            if (detectionColorToggle == 1) {
+                mOverlayView.show3DToast("RED DETECTED");
+                mClient_flags[detectionColorToggle - 1] = 1;  //raise the flag for this client
+            } else if (detectionColorToggle == 2) {
+                mOverlayView.show3DToast("BLUE DETECTED");
+                mClient_flags[detectionColorToggle - 1] = 1;
+            } else {
+                mOverlayView.show3DToast((""));
+                mClient_flags[0] = 0;
+                mClient_flags[1] = 0;
             }
-            mDetector.setHsvColor(mBlobColorHsv);
+        }
 
-            mDetector.process(img_rgba);
-
-            // Found the color we are looking for! (If the contour size is larger than 0)
-            if(mDetector.getContours().size() > 0) {
-                if(detectionColorToggle == 1)
-                    mOverlayView.show3DToast("RED DETECTED");
-                else if(detectionColorToggle == 2)
-                    mOverlayView.show3DToast("BLUE DETECTED");
-                else
-                    mOverlayView.show3DToast((""));
-            }
-
-            detectionColorToggle = (detectionColorToggle + 1) % 3;
-            //Log.i("Activity", Integer.toString(detectionColorToggle));
+        detectionColorToggle = (detectionColorToggle + 1) % 3;
+        //Log.i("Activity", Integer.toString(detectionColorToggle));
         }
     };
+
     private void initRealWorldCamera() {
         mRealCamera = Camera.open(0);
 
@@ -459,6 +472,8 @@ public class Renderer implements CardboardView.StereoRenderer {
         //Start the preview
         mRealCamera.startPreview();
     }
+
+    public int[] getClientStatus() { return mClient_flags; }
 
     /**
      * Find a new random position for the object.

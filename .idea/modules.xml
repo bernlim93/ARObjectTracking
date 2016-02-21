@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ARVitals.iml" filepath="$PROJECT_DIR$/ARVitals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ARObjectTracking.iml" filepath="$PROJECT_DIR$/ARObjectTracking.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cardboard-detector.iml" filepath="$PROJECT_DIR$/cardboard-detector.iml" />
       <module fileurl="file://$PROJECT_DIR$/openCVLibrary300/openCVLibrary300.iml" filepath="$PROJECT_DIR$/openCVLibrary300/openCVLibrary300.iml" />
     </modules>
   </component>
 </project>
+

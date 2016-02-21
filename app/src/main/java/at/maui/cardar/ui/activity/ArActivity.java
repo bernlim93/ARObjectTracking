@@ -132,16 +132,23 @@ public class ArActivity extends CardboardActivity {
                             Calendar c = Calendar.getInstance();
                             SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
                             String formattedDate = df.format(c.getTime());
-                            String[] txtSplit = txtArduino.split("\\s+");
+                            String[] txtSplit = txtArduino.split("\\s+");   //Heart rate, temperature, steps, speed, concussion probability
 
                             if(txtSplit.length == 5) {
-                                overlayView.show3DHUDItems(formattedDate + "\n" +
-                                        getString(R.string.hud_pulse) + " " + txtSplit[1] + "\n" +
-                                        getString(R.string.hud_muscle) + " " + txtSplit[2] + "\n" +
-                                        getString(R.string.hud_direction) + " " + txtSplit[4] + "\n");
-
-                                if (Integer.parseInt(txtSplit[3]) == 4) {
-                                    overlayView.show3DExplosion(currHUD);
+                                int[] check = mRenderer.getClientStatus();
+                                if(check[0] == 0 && check[1] == 0)
+                                    overlayView.show3DHUDItems("");
+                                else {
+                                    if (check[0] == 1) {
+                                        overlayView.show3DHUDItems("Client: " + 0 + "\n" +
+                                                    "Heart Rate: " + txtSplit[0] + "\n" +
+                                                    "Temperature: " + txtSplit[1] + "\n");
+                                    } else {
+                                        overlayView.show3DHUDItems("Client: " + 1 + "\n" +
+                                                "Total Steps Taken: " + txtSplit[2] + "\n" +
+                                                "Speed: " + txtSplit[3] + "\n" +
+                                                "Concussion Probability: " + txtSplit[4] + "%\n");
+                                    }
                                 }
                             }
                         }

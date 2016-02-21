@@ -1,34 +1,66 @@
 [
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gun3.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/gun3.png"
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\explosion2.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\explosion2.png"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/explosion0.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/explosion0.png"
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\explosion.gif",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\explosion.gif"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gun1.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/gun1.png"
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gun1.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\gun1.png"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/explosion.gif",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/explosion.gif"
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\explosion2.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\explosion2.png"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/blank.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/blank.png"
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gun2.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\gun2.png"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gun3.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\gun3.png"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/explosion2.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/explosion2.png"
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\blank.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\blank.png"
     },
     {
-        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/gun2.png",
-        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-hdpi/gun2.png"
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gun3.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\gun3.png"
+    },
+    {
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\explosion0.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\explosion0.png"
+    },
+    {
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\blank.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\blank.png"
+    },
+    {
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gun2.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\gun2.png"
+    },
+    {
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\explosion.gif",
+        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-hdpi\\explosion.gif"
+    },
+    {
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\gun1.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\gun1.png"
+    },
+    {
+        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\explosion0.png",
+        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-hdpi\\explosion0.png"
     }
 ]

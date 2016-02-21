@@ -1,6 +1,10 @@
 [
     {
-        "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/openCVLibrary300/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "outputFile": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\openCVLibrary300\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+        "map": []
+    },
+    {
+        "outputFile": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\openCVLibrary300\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
         "map": []
     }
 ]
