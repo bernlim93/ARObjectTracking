@@ -116,22 +116,71 @@ public class ArActivity extends CardboardActivity {
 
         h = new Handler() {
             public void handleMessage(android.os.Message msg) {
+
+//                Log.d("AR", "test1");
                 switch (msg.what) {
                     case RECIEVE_MESSAGE:                                                   // if receive massage
-
+//                        Log.d("AR", "test2");
                         byte[] readBuf = (byte[]) msg.obj;
                         String strIncom = new String(readBuf, 0, msg.arg1);                 // create string from bytes array
+
                         sb.append(strIncom);                                                // append string
                         int endOfLineIndex = sb.indexOf("\r\n");                            // determine the end-of-line
+                        Log.d("AR", "Incoming: " + sb);
                         if (endOfLineIndex > 0) {                                            // if end-of-line,
+
                             String sbprint = sb.substring(0, endOfLineIndex);               // extract string
                             sb.delete(0, sb.length());                                      // and clear
                             txtArduino = sbprint;            // update TextView
+                            Log.d("AR", "txtArduino: " + txtArduino);
+                            String[] txtSplit = txtArduino.split(",");   //Heart rate, temperature, steps, speed, concussion probability
 
-                            //Steps, pulse, muscle, fire, direction
-                            Renderer.txtSplit = txtArduino.split("\\s+");   //Heart rate, temperature, steps, speed, concussion probability
-                            if(Renderer.txtSplit.length == 5)
-                                Log.d("AR", Renderer.txtSplit[0]+ " " +Renderer.txtSplit[1]+ " " +Renderer.txtSplit[2]+ " " +Renderer.txtSplit[3]+ " " +Renderer.txtSplit[4]);
+                            if(txtSplit.length == 5)
+                                Log.d("AR", txtSplit[0]+ " " +txtSplit[1]+ " " +txtSplit[2]+ " " +txtSplit[3]+ " " +txtSplit[4]);
+
+
+                            // BLUE
+                            if(mRenderer.red_size < mRenderer.blue_size) {
+                                //mOverlayView.show3DToast("RED DETECTED");
+                                if (txtSplit.length == 5) {
+                                    overlayView.changeGun(1);
+                                    overlayView.show3DHUDItems("Client: " + 0 + "\n" +
+                                            "Heart Rate: " + txtSplit[0] + "\n" +
+                                            "Temperature: " + Integer.parseInt(txtSplit[1])/10 + "\n");
+                                }
+                                else {
+                                    overlayView.changeGun(1);
+                                    overlayView.show3DHUDItems("Client: " + 0 + "\n" +
+                                            "Heart Rate: " + "78" + "\n" +
+                                            "Temperature: " + "84" + "\n");
+                                }
+                            }
+
+                            // RED
+                            else if(mRenderer.red_size > mRenderer.blue_size) {
+                                //mOverlayView.show3DToast("BLUE DETECTED");
+                                if (txtSplit.length == 5) {
+                                    overlayView.changeGun(1);
+                                    overlayView.show3DHUDItems("Client: " + 1 + "\n" +
+                                            "Total Steps: " + txtSplit[2] + "\n" +
+                                            "Speed: " + Integer.parseInt(txtSplit[3])/100 + "\n" +
+                                            "Concussion %: " + Integer.parseInt(txtSplit[4])/10 + "%\n");
+                                }
+                                else {
+                                    overlayView.changeGun(1);
+                                    overlayView.show3DHUDItems("Client: " + 1 + "\n" +
+                                            "Total Steps: " + "34" + "\n" +
+                                            "Speed: " + "0" + "\n" +
+                                            "Concussion %: " + "1" + "%\n");
+                                }
+                            }
+
+                            // NONE
+                            else {
+                                overlayView.changeGun(0);
+                                overlayView.show3DToast((""));
+                                overlayView.show3DHUDItems("" + "\n");
+                            }
                         }
 
                         //Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");
@@ -316,13 +365,16 @@ public class ArActivity extends CardboardActivity {
 
             // Keep listening to the InputStream until an exception occurs
             while (true) {
-                try {
-                    // Read from the InputStream
-                    bytes = mmInStream.read(buffer);        // Get number of bytes and message in "buffer"
-                    h.obtainMessage(RECIEVE_MESSAGE, bytes, -1, buffer).sendToTarget();     // Send to message queue Handler
-                } catch (IOException e) {
-                    break;
+                if(mRenderer.flag==1) {
+                    try {
+                        // Read from the InputStream
+                        bytes = mmInStream.read(buffer);        // Get number of bytes and message in "buffer"
+                        h.obtainMessage(RECIEVE_MESSAGE, bytes, -1, buffer).sendToTarget();     // Send to message queue Handler
+                    } catch (IOException e) {
+                        break;
+                    }
                 }
+                mRenderer.flag = 0;
             }
         }
     }
