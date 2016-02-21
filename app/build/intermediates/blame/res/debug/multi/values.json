@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/values/values.xml",
+        "outputFile": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,14 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/dimens.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 88,
-                        "endColumn": 57,
-                        "endOffset": 141
-                    }
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/dimens.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 146,
-                        "endColumn": 55,
-                        "endOffset": 197
-                    }
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\dimens.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 217
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 153,
-                        "endColumn": 52,
-                        "endOffset": 201
-                    }
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 261
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 56,
-                        "endColumn": 43,
-                        "endOffset": 95
-                    }
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 314
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 100,
-                        "endColumn": 52,
-                        "endOffset": 148
-                    }
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -106,7 +71,7 @@
                     "endOffset": 361
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -125,7 +90,211 @@
                     "endOffset": 409
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 414,
+                    "endColumn": 45,
+                    "endOffset": 455
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 460,
+                    "endColumn": 45,
+                    "endOffset": 501
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 506,
+                    "endColumn": 49,
+                    "endOffset": 551
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 556,
+                    "endColumn": 59,
+                    "endOffset": 611
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 616,
+                    "endColumn": 51,
+                    "endOffset": 663
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 668,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 796
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\cardar-master\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 88,
+                        "endColumn": 57,
+                        "endOffset": 141
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endColumn": 55,
+                    "endOffset": 164
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 146,
+                        "endColumn": 55,
+                        "endOffset": 197
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 169,
+                    "endColumn": 52,
+                    "endOffset": 217
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 52,
+                        "endOffset": 201
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 222,
+                    "endColumn": 43,
+                    "endOffset": 261
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 43,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 266,
+                    "endColumn": 52,
+                    "endOffset": 314
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 52,
+                        "endOffset": 148
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 319,
+                    "endColumn": 46,
+                    "endOffset": 361
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endColumn": 46,
+                        "endOffset": 389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 366,
+                    "endColumn": 47,
+                    "endOffset": 409
+                },
+                "from": {
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -144,7 +313,7 @@
                     "endOffset": 455
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -163,7 +332,7 @@
                     "endOffset": 501
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -182,7 +351,7 @@
                     "endOffset": 551
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -201,7 +370,7 @@
                     "endOffset": 611
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -220,7 +389,7 @@
                     "endOffset": 663
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -240,7 +409,7 @@
                     "endOffset": 796
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/values/styles.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\Pulse hackathon\\f-hud\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -254,84 +423,100 @@
         ]
     },
     {
-        "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/build/intermediates/res/merged/debug/values/values.xml",
+        "outputFile": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 57,
-                    "endOffset": 108
-                },
-                "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/dimens.xml"
-                }
-            },
             {
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 113,
-                    "endColumn": 55,
-                    "endOffset": 164
+                    "startOffset": 304,
+                    "endColumn": 57,
+                    "endOffset": 357
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/dimens.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 90,
+                        "endColumn": 57,
+                        "endOffset": 143
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 169,
-                    "endColumn": 52,
-                    "endOffset": 217
+                    "startOffset": 362,
+                    "endColumn": 55,
+                    "endOffset": 413
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 149,
+                        "endColumn": 55,
+                        "endOffset": 200
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 222,
-                    "endColumn": 43,
-                    "endOffset": 261
+                    "startOffset": 418,
+                    "endColumn": 52,
+                    "endOffset": 466
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 158,
+                        "endColumn": 52,
+                        "endOffset": 206
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 266,
-                    "endColumn": 52,
-                    "endOffset": 314
+                    "startOffset": 471,
+                    "endColumn": 43,
+                    "endOffset": 510
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endColumn": 43,
+                        "endOffset": 98
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 319,
-                    "endColumn": 46,
-                    "endOffset": 361
+                    "startOffset": 515,
+                    "endColumn": 52,
+                    "endOffset": 563
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 347,
-                        "endColumn": 46,
-                        "endOffset": 389
+                        "startOffset": 104,
+                        "endColumn": 52,
+                        "endOffset": 152
                     }
                 }
             },
@@ -339,91 +524,160 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 366,
-                    "endColumn": 47,
-                    "endOffset": 409
+                    "startOffset": 568,
+                    "endColumn": 46,
+                    "endOffset": 610
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 357,
+                        "endColumn": 46,
+                        "endOffset": 399
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 414,
-                    "endColumn": 45,
-                    "endOffset": 455
+                    "startOffset": 615,
+                    "endColumn": 47,
+                    "endOffset": 658
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 308,
+                        "endColumn": 47,
+                        "endOffset": 351
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 460,
+                    "startOffset": 663,
                     "endColumn": 45,
-                    "endOffset": 501
+                    "endOffset": 704
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 261,
+                        "endColumn": 45,
+                        "endOffset": 302
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 506,
-                    "endColumn": 49,
-                    "endOffset": 551
+                    "startOffset": 709,
+                    "endColumn": 45,
+                    "endOffset": 750
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 45,
+                        "endOffset": 255
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 556,
-                    "endColumn": 59,
-                    "endOffset": 611
+                    "startOffset": 755,
+                    "endColumn": 49,
+                    "endOffset": 800
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 407,
+                        "endColumn": 49,
+                        "endOffset": 452
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 616,
-                    "endColumn": 51,
-                    "endOffset": 663
+                    "startOffset": 805,
+                    "endColumn": 59,
+                    "endOffset": 860
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/strings.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 458,
+                        "endColumn": 59,
+                        "endOffset": 513
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 668,
-                    "endLine": 16,
-                    "endColumn": 12,
-                    "endOffset": 796
+                    "startOffset": 865,
+                    "endColumn": 51,
+                    "endOffset": 912
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/cardar-master/app/src/main/res/values/styles.xml"
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 519,
+                        "endColumn": 51,
+                        "endOffset": 566
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 917,
+                    "endLine": 17,
+                    "endColumn": 12,
+                    "endOffset": 1045
+                },
+                "from": {
+                    "file": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARVitals\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 187
+                    }
                 }
             }
         ]
     },
     {
-        "outputFile": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/build/intermediates/res/merged/debug/values/values.xml",
+        "outputFile": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -434,7 +688,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/dimens.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -453,7 +707,7 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/dimens.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -472,7 +726,7 @@
                     "endOffset": 217
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -491,7 +745,7 @@
                     "endOffset": 261
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -510,7 +764,7 @@
                     "endOffset": 314
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -529,7 +783,7 @@
                     "endOffset": 361
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -548,7 +802,7 @@
                     "endOffset": 409
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -567,7 +821,7 @@
                     "endOffset": 455
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -586,7 +840,7 @@
                     "endOffset": 501
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -605,7 +859,7 @@
                     "endOffset": 551
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -624,7 +878,7 @@
                     "endOffset": 611
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -643,7 +897,7 @@
                     "endOffset": 663
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/strings.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -663,7 +917,7 @@
                     "endOffset": 796
                 },
                 "from": {
-                    "file": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/app/src/main/res/values/styles.xml",
+                    "file": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
