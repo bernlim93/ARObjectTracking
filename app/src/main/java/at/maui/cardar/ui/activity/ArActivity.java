@@ -118,7 +118,7 @@ public class ArActivity extends CardboardActivity {
             public void handleMessage(android.os.Message msg) {
                 switch (msg.what) {
                     case RECIEVE_MESSAGE:                                                   // if receive massage
-                        Log.d("Test AR", "hi");
+
                         byte[] readBuf = (byte[]) msg.obj;
                         String strIncom = new String(readBuf, 0, msg.arg1);                 // create string from bytes array
                         sb.append(strIncom);                                                // append string
@@ -130,6 +130,8 @@ public class ArActivity extends CardboardActivity {
 
                             //Steps, pulse, muscle, fire, direction
                             Renderer.txtSplit = txtArduino.split("\\s+");   //Heart rate, temperature, steps, speed, concussion probability
+                            if(Renderer.txtSplit.length == 5)
+                                Log.d("AR", Renderer.txtSplit[0]+ " " +Renderer.txtSplit[1]+ " " +Renderer.txtSplit[2]+ " " +Renderer.txtSplit[3]+ " " +Renderer.txtSplit[4]);
                         }
 
                         //Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");

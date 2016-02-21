@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.os.Handler;
 
+import java.lang.reflect.Type;
+
 import at.maui.cardar.R;
 
 public class CardboardOverlayView extends LinearLayout {
@@ -43,7 +45,7 @@ public class CardboardOverlayView extends LinearLayout {
 
         // Set some reasonable defaults.
         setDepthOffset(0.016f);
-        setColor(Color.rgb(150, 255, 180));
+        setColor(Color.rgb(0, 0, 0));
         setVisibility(View.VISIBLE);
 
 //        mTextFadeAnimation = new AlphaAnimation(1.0f, 0.0f);
@@ -148,14 +150,14 @@ public class CardboardOverlayView extends LinearLayout {
 
             textView = new TextView(context, attrs);
             textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 8.0f);
-            textView.setTypeface(textView.getTypeface(), Typeface.NORMAL);
+            textView.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL);
             textView.setGravity(Gravity.RIGHT);
             textView.setShadowLayer(3.0f, 0.0f, 0.0f, Color.DKGRAY);
             addView(textView);
 
             HUDView = new TextView(context, attrs);
-            HUDView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 8.0f);
-            HUDView.setTypeface(HUDView.getTypeface(), Typeface.NORMAL);
+            HUDView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 6.0f);
+            HUDView.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
             HUDView.setGravity(Gravity.LEFT);
             HUDView.setShadowLayer(3.0f, 0.0f, 0.0f, Color.DKGRAY);
             addView(HUDView);
@@ -185,11 +187,9 @@ public class CardboardOverlayView extends LinearLayout {
 
         public void setViewExplosion(int type) {
             if(type ==0)
-                explodeView.setImageResource(R.drawable.explosion2);
+                explodeView.setImageResource(R.drawable.info_card);
             else if(type==1)
-                explodeView.setImageResource(R.drawable.explosion0);
-            else if(type==2)
-                explodeView.setImageResource(R.drawable.explosion);
+                explodeView.setImageResource(0);
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
@@ -200,11 +200,9 @@ public class CardboardOverlayView extends LinearLayout {
         }
 
         public void setViewGun(int type) {
-            if(type==0)
-                imageView.setImageResource(0);
-            else if(type==1)
-                imageView.setImageResource(0);
-            else if(type==2)
+            if(type==1)
+                imageView.setImageResource(R.drawable.info_card);
+            else if(type==0)
                 imageView.setImageResource(0);
         }
 
@@ -221,7 +219,7 @@ public class CardboardOverlayView extends LinearLayout {
             // The size of the image, given as a fraction of the dimension as a ViewGroup. We multiply
             // both width and heading with this number to compute the image's bounding box. Inside the
             // box, the image is the horizontally and vertically centered.
-            final float imageSize = 1.0f;
+            final float imageSize = 0.3f;
 
             // The fraction of this ViewGroup's height by which we shift the image off the ViewGroup's
             // center. Positive values shift downwards, negative values shift upwards.
@@ -232,8 +230,8 @@ public class CardboardOverlayView extends LinearLayout {
 
             // Layout ImageView
             float imageMargin = (1.0f - imageSize) / 2.0f;
-            float leftMargin = (int) (width * (imageMargin + offset));
-            float topMargin = (int) (height * (imageMargin + verticalImageOffset) + 400);
+            float leftMargin = - 240 + (int) (width * (imageMargin + offset));
+            float topMargin = - 330 + (int) (height * (imageMargin + verticalImageOffset) + 400);
             imageView.layout(
                     (int) leftMargin, (int) topMargin,
                     (int) (leftMargin + width * imageSize), (int) (topMargin + height * imageSize));
@@ -254,8 +252,8 @@ public class CardboardOverlayView extends LinearLayout {
                     (int) (leftMargin + width), (int) (topMargin + height * (1.0f - verticalTextPos)));
 
             // Layout HUDView
-            leftMargin = 300 + offset * width;
-            topMargin = height * verticalTextPos - 150;
+            leftMargin = 350 + offset * width;
+            topMargin = height * verticalTextPos - 120;
             HUDView.layout(
                     (int) leftMargin, (int) topMargin,
                     (int) (leftMargin + width), (int) (topMargin + height * (1.0f - verticalTextPos)));

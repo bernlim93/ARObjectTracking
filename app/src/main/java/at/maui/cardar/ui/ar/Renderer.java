@@ -61,6 +61,9 @@ public class Renderer implements CardboardView.StereoRenderer {
     private static final int NUM_READINGS = 5;
     private static final int NUM_CLIENTS = 2;
 
+    private static int red_size = 0;
+    private static int blue_size = 0;
+
     public static String[] txtSplit = new String[5];
 
     private final WorldLayoutData DATA = new WorldLayoutData();
@@ -413,36 +416,49 @@ public class Renderer implements CardboardView.StereoRenderer {
         //Log.i("Renderer", "Top Right Color = " + img_rgba.get(0, 0)[0] + " , " + img_rgba.get(0, 0)[1] + " , " + img_rgba.get(0, 0)[2] + " , " + img_rgba.get(0,0)[3]);
 
         Scalar mBlobColorHsv;
-        if(detectionColorToggle==1) {  //look for red this frame
-            mBlobColorHsv = converScalarRgba2Hsv(new Scalar(200, 0, 10, 255));
-        } else if(detectionColorToggle==2) {    //look for blue this frame
-            mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
-        } else {    //set to just black
-            mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 0, 0, 255));
-        }
-        mDetector.setHsvColor(mBlobColorHsv);
-
-        mDetector.process(img_rgba);
 
         // Found the color we are looking for! (If the contour size is larger than 0)
-        if(mDetector.getContours().size() > 0) {
-            if (detectionColorToggle == 1) {
-                mOverlayView.show3DToast("RED DETECTED");
+        mBlobColorHsv = converScalarRgba2Hsv(new Scalar(200, 0, 10, 255));
+        mDetector.setHsvColor(mBlobColorHsv);
+        mDetector.process(img_rgba);
+        red_size = mDetector.getContours().size();
+
+        mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 100, 255, 255));
+        mDetector.setHsvColor(mBlobColorHsv);
+        mDetector.process(img_rgba);
+        blue_size = mDetector.getContours().size();
+
+        // RED
+        if(red_size > blue_size) {
+            //mOverlayView.show3DToast("RED DETECTED");
+            if (Renderer.txtSplit.length == 5) {
+                mOverlayView.changeGun(1);
                 mOverlayView.show3DHUDItems("Client: " + 0 + "\n" +
                         "Heart Rate: " + Renderer.txtSplit[0] + "\n" +
                         "Temperature: " + Renderer.txtSplit[1] + "\n");
-            } else if (detectionColorToggle == 2) {
-                mOverlayView.show3DToast("BLUE DETECTED");
-                mOverlayView.show3DHUDItems("Client: " + 1 + "\n" +
-                        "Total Steps Taken: " + Renderer.txtSplit[2] + "\n" +
-                        "Speed: " + Renderer.txtSplit[3] + "\n" +
-                        "Concussion Probability: " + Renderer.txtSplit[4] + "%\n");
-            } else {
-                mOverlayView.show3DToast((""));
-                mOverlayView.show3DHUDItems("" + "\n");
             }
-//            Log.d("Renderer side", Integer.toString(mClient_flags[0]) + " " + Integer.toString(mClient_flags[1]));
         }
+
+        // BLUE
+        else if(red_size < blue_size) {
+            //mOverlayView.show3DToast("BLUE DETECTED");
+            if (Renderer.txtSplit.length == 5) {
+                mOverlayView.changeGun(1);
+                mOverlayView.show3DHUDItems("Client: " + 1 + "\n" +
+                        "Total Steps: " + Renderer.txtSplit[2] + "\n" +
+                        "Speed: " + Renderer.txtSplit[3] + "\n" +
+                        "Concussion %: " + Renderer.txtSplit[4] + "%\n");
+            }
+        }
+
+        // NONE
+        else {
+            mOverlayView.changeGun(0);
+            mOverlayView.show3DToast((""));
+            mOverlayView.show3DHUDItems("" + "\n");
+        }
+//            Log.d("Renderer side", Integer.toString(mClient_flags[0]) + " " + Integer.toString(mClient_flags[1]));
+
 
         detectionColorToggle = (detectionColorToggle + 1) % 3;
         //Log.i("Activity", Integer.toString(detectionColorToggle));
