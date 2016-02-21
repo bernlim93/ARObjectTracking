@@ -1,13 +1,18 @@
 package at.maui.cardar.ui.ar;
 
 import static at.maui.cardar.ui.ar.GLUtils.checkGLError;
-
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.SurfaceTexture;
+import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 import android.opengl.Matrix;
+import android.opengl.GLUtils;
+import android.util.Log;
 
 import com.google.vrtoolkit.cardboard.CardboardView;
 import com.google.vrtoolkit.cardboard.EyeTransform;
@@ -20,9 +25,22 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
 
 import at.maui.cardar.R;
+import at.maui.cardar.ui.gltext.GLText;
+import at.maui.cardar.ui.widget.CardboardOverlayView;
 import timber.log.Timber;
+
+import org.opencv.core.Core;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfPoint;
+import org.opencv.core.Scalar;
+import org.opencv.imgproc.Imgproc;
+
+import java.util.List;
+
 
 /**
  * Created by maui on 02.07.2014.
@@ -96,8 +114,16 @@ public class Renderer implements CardboardView.StereoRenderer {
     private float mObjectDistance = 12f;
     private float mFloorDepth = 60f;
 
-    public Renderer(Context ctx) {
+    private ColorBlobDetector mDetector;
+    private CardboardOverlayView mOverlayView;
+    private GLText glText;
+
+    public Renderer(Context ctx, CardboardOverlayView ov) {
+        mOverlayView = ov;
+
         mContext = ctx;
+        glText = new GLText(mContext.getAssets());
+        glText.load( "Roboto-Regular.ttf", 14, 2, 2 );
 
         mCamera = new float[16];
         mView = new float[16];
@@ -147,6 +173,18 @@ public class Renderer implements CardboardView.StereoRenderer {
         // Apply the eye transformation to the camera.
         Matrix.multiplyMM(mView, 0, eyeTransform.getEyeView(), 0, mCamera, 0);
 
+        glText.begin( 1.0f, 1.0f, 1.0f, 1.0f, mModelViewProjection );         // Begin Text Rendering (Set Color WHITE)
+        glText.drawC("Test String 3D!", 0f, 0f, 0f, 0, -30, 0);
+//		glText.drawC( "Test String :)", 0, 0, 0 );          // Draw Test String
+        glText.draw( "Diagonal 1", 40, 40, 40);                // Draw Test String
+        glText.draw( "Column 1", 100, 100, 90);              // Draw Test String
+        glText.end();                                   // End Text Rendering
+
+        glText.begin( 0.0f, 0.0f, 1.0f, 1.0f, mModelViewProjection );         // Begin Text Rendering (Set Color BLUE)
+        glText.draw( "More Lines...", 50, 200 );        // Draw Test String
+        glText.draw( "The End.", 50, 200 + glText.getCharHeight(), 180);  // Draw Test String
+        glText.end();
+
         /*GLES20.glUseProgram(mGlPrograms[0]);
 
         mPositionParam = GLES20.glGetAttribLocation(mGlPrograms[0], "vPosition");
@@ -194,7 +232,7 @@ public class Renderer implements CardboardView.StereoRenderer {
                 mLightPosInEyeSpace[2]);
 
         // Build the ModelView and ModelViewProjection matrices
-        // for calculating cube position and light.
+         //for calculating cube position and light.
 //        Matrix.multiplyMM(mModelView, 0, mView, 0, mModelCube, 0);
 //        Matrix.multiplyMM(mModelViewProjection, 0, eyeTransform.getPerspective(), 0, mModelView, 0);
 //        drawCube();
@@ -212,10 +250,9 @@ public class Renderer implements CardboardView.StereoRenderer {
         Matrix.multiplyMM(mModelViewProjection, 0, eyeTransform.getPerspective(), 0,
                 mModelView, 0);
         drawFloor(eyeTransform.getPerspective());
-
     }
 
-
+/*
     public void drawCube() {
         // This is not the floor!
         GLES20.glUniform1f(mIsFloorParam, 0f);
@@ -247,7 +284,7 @@ public class Renderer implements CardboardView.StereoRenderer {
         GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 36);
         checkGLError("Drawing cube");
     }
-
+*/
     public void drawWall() {
 
         GLES20.glUniform1f(mIsFloorParam, 0.3f);
@@ -355,6 +392,39 @@ public class Renderer implements CardboardView.StereoRenderer {
         GLES20.glTexParameteri(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_NEAREST);
     }
 
+    boolean detectionColorToggle = true;
+    private final Camera.PreviewCallback mCameraCallback = new Camera.PreviewCallback() {
+        public void onPreviewFrame(byte[] data, Camera c) {
+            //Log.d(TAG, "ON Preview frame");
+            mDetector = new ColorBlobDetector();
+            Mat img = new Mat(1080 , 1920, CvType.CV_8UC2);
+            Mat img_rgba = new Mat();
+            img.put(0, 0, data);
+            Imgproc.cvtColor(img, img_rgba, Imgproc.COLOR_YUV2RGBA_NV21, 4);
+
+            //Log.i("Renderer", "Top Right Color = " + img_rgba.get(0, 0)[0] + " , " + img_rgba.get(0, 0)[1] + " , " + img_rgba.get(0, 0)[2] + " , " + img_rgba.get(0,0)[3]);
+
+            Scalar mBlobColorHsv;
+            if(detectionColorToggle) {  //look for red this frame
+                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(255, 0, 0, 255));
+            } else {    //look for blue this frame
+                mBlobColorHsv = converScalarRgba2Hsv(new Scalar(0, 0, 255, 255));
+            }
+            mDetector.setHsvColor(mBlobColorHsv);
+
+            mDetector.process(img_rgba);
+            List<MatOfPoint> contours = mDetector.getContours();
+            //Log.i("Renderer", "contours = " + contours.size());
+            if(mDetector.getContours().size() > 0) {
+                if(detectionColorToggle)
+                    mOverlayView.show3DToast("RED DETECTED");
+                else
+                    mOverlayView.show3DToast("BLUE DETECTED");
+            }
+
+            detectionColorToggle = !detectionColorToggle;
+        }
+    };
     private void initRealWorldCamera() {
         mRealCamera = Camera.open(0);
 
@@ -378,7 +448,10 @@ public class Renderer implements CardboardView.StereoRenderer {
         } catch (IOException t) {
             Timber.e("Cannot set preview texture target!");
         }
-
+        Camera.Parameters p = mRealCamera.getParameters();
+        p.setWhiteBalance(Camera.Parameters.WHITE_BALANCE_FLUORESCENT);
+        mRealCamera.setParameters(p);
+        mRealCamera.setPreviewCallback(mCameraCallback);
         //Start the preview
         mRealCamera.startPreview();
     }
@@ -497,8 +570,8 @@ public class Renderer implements CardboardView.StereoRenderer {
     }
 
     private int initWorldShader() {
-        int vertexShader = GLUtils.loadGLShader(mContext, GLES20.GL_VERTEX_SHADER, R.raw.light_vertex);
-        int gridShader = GLUtils.loadGLShader(mContext, GLES20.GL_FRAGMENT_SHADER, R.raw.grid_fragment);
+        int vertexShader = at.maui.cardar.ui.ar.GLUtils.loadGLShader(mContext, GLES20.GL_VERTEX_SHADER, R.raw.light_vertex);
+        int gridShader = at.maui.cardar.ui.ar.GLUtils.loadGLShader(mContext, GLES20.GL_FRAGMENT_SHADER, R.raw.grid_fragment);
 
         mGlPrograms[1] = GLES20.glCreateProgram();
         GLES20.glAttachShader(mGlPrograms[1], vertexShader);
@@ -506,6 +579,14 @@ public class Renderer implements CardboardView.StereoRenderer {
         GLES20.glLinkProgram(mGlPrograms[1]);
 
         return mGlPrograms[1];
+    }
+
+    private Scalar converScalarRgba2Hsv(Scalar rgbaColor) {
+        Mat pointMatHsv = new Mat();
+        Mat pointMatRgba = new Mat(1, 1, CvType.CV_8UC3, rgbaColor);
+        Imgproc.cvtColor(pointMatRgba, pointMatHsv, Imgproc.COLOR_RGB2HSV_FULL, 4);
+
+        return new Scalar(pointMatHsv.get(0, 0));
     }
 
     @Override
