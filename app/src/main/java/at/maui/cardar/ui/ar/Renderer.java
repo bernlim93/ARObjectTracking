@@ -61,6 +61,8 @@ public class Renderer implements CardboardView.StereoRenderer {
     private static final int NUM_READINGS = 5;
     private static final int NUM_CLIENTS = 2;
 
+    public static String[] txtSplit = new String[5];
+
     private final WorldLayoutData DATA = new WorldLayoutData();
 
     private Context mContext;
@@ -426,15 +428,20 @@ public class Renderer implements CardboardView.StereoRenderer {
         if(mDetector.getContours().size() > 0) {
             if (detectionColorToggle == 1) {
                 mOverlayView.show3DToast("RED DETECTED");
-                mClient_flags[detectionColorToggle - 1] = 1;  //raise the flag for this client
+                mOverlayView.show3DHUDItems("Client: " + 0 + "\n" +
+                        "Heart Rate: " + Renderer.txtSplit[0] + "\n" +
+                        "Temperature: " + Renderer.txtSplit[1] + "\n");
             } else if (detectionColorToggle == 2) {
                 mOverlayView.show3DToast("BLUE DETECTED");
-                mClient_flags[detectionColorToggle - 1] = 1;
+                mOverlayView.show3DHUDItems("Client: " + 1 + "\n" +
+                        "Total Steps Taken: " + Renderer.txtSplit[2] + "\n" +
+                        "Speed: " + Renderer.txtSplit[3] + "\n" +
+                        "Concussion Probability: " + Renderer.txtSplit[4] + "%\n");
             } else {
                 mOverlayView.show3DToast((""));
-                mClient_flags[0] = 0;
-                mClient_flags[1] = 0;
+                mOverlayView.show3DHUDItems("" + "\n");
             }
+//            Log.d("Renderer side", Integer.toString(mClient_flags[0]) + " " + Integer.toString(mClient_flags[1]));
         }
 
         detectionColorToggle = (detectionColorToggle + 1) % 3;

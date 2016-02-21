@@ -1,10 +1,14 @@
 [
     {
-        "merged": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\bernard\\Documents\\UIUC school\\FA2 sem2\\HackIllinois\\cardboard-detector\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/HackIllinois/cardboard-detector/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "/Users/bernard/Documents/UIUC school/FA2 sem2/Pulse hackathon/f-hud/C:\\Users\\Steven\\Desktop\\HackIllinois\\ARObjectTracking\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
     }
 ]

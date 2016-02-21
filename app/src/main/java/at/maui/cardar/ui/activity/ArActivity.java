@@ -56,7 +56,6 @@ public class ArActivity extends CardboardActivity {
     private Renderer mRenderer;
 
     private Vibrator mVibrator;
-    private int currHUD = 0;
 
     //
     //----------- BLUETOOTH STUFF ------------//
@@ -119,6 +118,7 @@ public class ArActivity extends CardboardActivity {
             public void handleMessage(android.os.Message msg) {
                 switch (msg.what) {
                     case RECIEVE_MESSAGE:                                                   // if receive massage
+                        Log.d("Test AR", "hi");
                         byte[] readBuf = (byte[]) msg.obj;
                         String strIncom = new String(readBuf, 0, msg.arg1);                 // create string from bytes array
                         sb.append(strIncom);                                                // append string
@@ -129,28 +129,7 @@ public class ArActivity extends CardboardActivity {
                             txtArduino = sbprint;            // update TextView
 
                             //Steps, pulse, muscle, fire, direction
-                            Calendar c = Calendar.getInstance();
-                            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
-                            String formattedDate = df.format(c.getTime());
-                            String[] txtSplit = txtArduino.split("\\s+");   //Heart rate, temperature, steps, speed, concussion probability
-
-                            if(txtSplit.length == 5) {
-                                int[] check = mRenderer.getClientStatus();
-                                if(check[0] == 0 && check[1] == 0)
-                                    overlayView.show3DHUDItems("");
-                                else {
-                                    if (check[0] == 1) {
-                                        overlayView.show3DHUDItems("Client: " + 0 + "\n" +
-                                                    "Heart Rate: " + txtSplit[0] + "\n" +
-                                                    "Temperature: " + txtSplit[1] + "\n");
-                                    } else {
-                                        overlayView.show3DHUDItems("Client: " + 1 + "\n" +
-                                                "Total Steps Taken: " + txtSplit[2] + "\n" +
-                                                "Speed: " + txtSplit[3] + "\n" +
-                                                "Concussion Probability: " + txtSplit[4] + "%\n");
-                                    }
-                                }
-                            }
+                            Renderer.txtSplit = txtArduino.split("\\s+");   //Heart rate, temperature, steps, speed, concussion probability
                         }
 
                         //Log.d(TAG, "...String:"+ sb.toString() +  "Byte:" + msg.arg1 + "...");
